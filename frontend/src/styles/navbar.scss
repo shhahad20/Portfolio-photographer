@@ -1,0 +1,53 @@
+$primary-color: #faf6ed;
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  font-family: "Space Mono", serif;
+  nav {
+    width: 1400px;
+    display: flex;
+    justify-content: left;
+    .container {
+      display: flex;
+      justify-content: space-between;
+    //   align-items: left;
+      gap: 5rem;
+        width: 62%;
+      a {
+        font-size: 18px;
+        color: $primary-color;
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px){
+    header{
+        width: 100%;
+        nav{
+            width: 100%;
+            border: 1px solid greenyellow;
+            justify-content: center;
+            .container{
+                width: 100%;
+                border: 1px solid red;
+                gap: 2rem;
+
+                .nav-links{
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+
+}

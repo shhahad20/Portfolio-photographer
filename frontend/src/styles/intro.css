@@ -1,0 +1,151 @@
+.intro-section {
+  height: 90vh;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-section .intro-text {
+  width: 60%;
+  margin-top: 2rem;
+  text-align: left;
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+}
+
+.intro-section .intro-text h1 {
+  font-family: "Roboto", serif;
+  font-size: 70px;
+  color: #faf6ed;
+  margin: 1rem 0;
+}
+
+.intro-section .intro-text .f-text {
+  font-weight: 900;
+}
+
+.intro-section .intro-text .s-text {
+  font-weight: 500;
+}
+
+.intro-section .intro-text .t-text {
+  font-weight: 300;
+}
+
+.intro-section .intro-text .intro-button button {
+  background: #faf6ed;
+  border: 0.125em solid #faf6ed;
+  cursor: pointer;
+  font-family: "Roboto", serif;
+  font-family: "Space Mono", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0.5rem;
+  padding: 0.5em 0.75em;
+  position: relative;
+  color: #faf6ed;
+}
+
+.intro-section .intro-text .intro-button button:before, .intro-section .intro-text .intro-button button:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.125s ease-in-out;
+  transition: all 0.125s ease-in-out;
+}
+
+.intro-section .intro-text .intro-button button.btn {
+  background: none;
+  border-color: transparent;
+}
+
+.intro-section .intro-text .intro-button button.btn:before, .intro-section .intro-text .intro-button button.btn:after {
+  -webkit-transition: all 0.175s ease-in-out;
+  transition: all 0.175s ease-in-out;
+}
+
+.intro-section .intro-text .intro-button button.btn:before {
+  background: #121212;
+  border: 0px dashed #faf6ed;
+  left: -0.125em;
+  top: -0.125em;
+  right: -0.125em;
+  bottom: -0.125em;
+  z-index: -1;
+}
+
+.intro-section .intro-text .intro-button button.btn:hover:before, .intro-section .intro-text .intro-button button.btn:focus:before {
+  background: #121212;
+  border-width: 0.125em;
+}
+
+.intro-section .intro-text .intro-button button.btn:after {
+  background: #121212;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* Medium devices (tablets, 1024px and below) */
+@media screen and (max-width: 1024px) {
+  .intro-section .intro-text {
+    width: 80%;
+    padding-left: 2rem;
+  }
+  .intro-section .intro-text h1 {
+    font-size: 60px;
+  }
+}
+
+/* Small devices (tablets and mobile, 768px and below) */
+@media screen and (max-width: 768px) {
+  .intro-section {
+    padding: 1.5rem;
+  }
+  .intro-section .intro-text {
+    width: 90%;
+    padding-left: 0;
+    padding-bottom: 3rem;
+  }
+  .intro-section .intro-text h1 {
+    font-size: 50px;
+    margin: 0.5rem 0;
+  }
+  .intro-section .intro-text .intro-button button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro-section {
+    padding: 1.5rem;
+    height: 60vh;
+  }
+  .intro-section .intro-text {
+    width: 90%;
+    text-align: center;
+    padding-left: 0;
+    padding-bottom: 3rem;
+  }
+  .intro-section .intro-text h1 {
+    font-size: 27px;
+    margin: 0.5rem 0;
+  }
+  .intro-section .intro-text .intro-button button {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,150 @@
+// intro.scss
+$measurement: 0.125em;
+.intro-section {
+  height: 90vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .intro-text {
+    width: 60%;
+    margin-top: 2rem;
+    text-align: left;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    h1 {
+      font-family: "Roboto", serif;
+      //   font-family: "Space Mono", serif;
+      font-size: 70px;
+      color: #faf6ed;
+      margin: 1rem 0;
+    }
+    .f-text {
+      font-weight: 900;
+    }
+    .s-text {
+      font-weight: 500;
+    }
+    .t-text {
+      font-weight: 300;
+    }
+
+    .intro-button {
+      button {
+        background: #faf6ed;
+        border: $measurement solid #faf6ed;
+        cursor: pointer;
+        font-family: "Roboto", serif;
+        font-family: "Space Mono", serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        margin: 0.5rem;
+        padding: 0.5em 0.75em;
+        position: relative;
+        color: #faf6ed;
+        // text-transform: uppercase;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          transition: all 0.125s ease-in-out;
+        }
+        &.btn {
+          background: none;
+          border-color: transparent;
+          &:before,
+          &:after {
+            transition: all 0.175s ease-in-out;
+          }
+          &:before {
+            background: #121212;
+            border: 0px dashed #faf6ed;
+            left: $measurement * -1;
+            top: $measurement * -1;
+            right: $measurement * -1;
+            bottom: $measurement * -1;
+            z-index: -1;
+          }
+          &:hover:before,
+          &:focus:before {
+            background: #121212;
+            border-width: $measurement;
+          }
+          &:after {
+            // background: #d8ba75;
+            background: #121212;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (tablets, 1024px and below) */
+@media screen and (max-width: 1024px) {
+    .intro-section {
+        // height: 50vh;
+      .intro-text {
+        width: 80%;
+        padding-left: 2rem;
+        
+        h1 {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+  
+  /* Small devices (tablets and mobile, 768px and below) */
+  @media screen and (max-width: 768px) {
+    .intro-section {
+      padding: 1.5rem;
+      .intro-text {
+        width: 90%;
+        // text-align: center;
+        padding-left: 0;
+        padding-bottom: 3rem;
+  
+        h1 {
+          font-size: 50px;
+          margin: 0.5rem 0;
+        }
+        .intro-button {
+          button {
+            font-size: 16px;
+            // padding: 0.5em 1em;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .intro-section {
+      padding: 1.5rem;
+      height: 60vh;
+      .intro-text {
+        width: 90%;
+        text-align: center;
+        padding-left: 0;
+        padding-bottom: 3rem;
+  
+        h1 {
+          font-size: 27px;
+          margin: 0.5rem 0;
+        }
+        .intro-button {
+          button {
+            font-size: 14px;
+            // padding: 0.5em 1em;
+          }
+        }
+      }
+    }
+  }

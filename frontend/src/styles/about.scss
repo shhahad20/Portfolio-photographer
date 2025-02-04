@@ -1,3 +1,48 @@
-#about-me{
-    height: 100vh;
+// about.scss
+#about-me {
+  padding: 2rem;
+  // background: #000;
+  color: #faf6ed;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .about-content-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 20rem;
+      // height: 50vh;
+      .about-header {
+        h1 {
+          font-size: 70px;
+          margin: 0;
+        }
+      }
+      .about-content {
+        // border: 1px solid greenyellow;
+        width: 35%;
+        p {
+          font-size: 18px;
+          line-height: 40px;
+        }
+        .about-extra {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 2rem;
+          p {
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            line-height: 25px;
+            font-family: "Space Mono", serif;
+          }
+        }
+      }
+    }
+
+  }
 }

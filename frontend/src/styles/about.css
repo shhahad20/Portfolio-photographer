@@ -1,4 +1,60 @@
 #about-me {
-  height: 100vh;
+  padding: 2rem;
+  color: #faf6ed;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+#about-me .about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about-me .about-container .about-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 20rem;
+}
+
+#about-me .about-container .about-content-container .about-header h1 {
+  font-size: 70px;
+  margin: 0;
+}
+
+#about-me .about-container .about-content-container .about-content {
+  width: 35%;
+}
+
+#about-me .about-container .about-content-container .about-content p {
+  font-size: 18px;
+  line-height: 40px;
+}
+
+#about-me .about-container .about-content-container .about-content .about-extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+#about-me .about-container .about-content-container .about-content .about-extra p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  font-family: "Space Mono", serif;
 }
 /*# sourceMappingURL=about.css.map */

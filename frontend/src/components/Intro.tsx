@@ -9,14 +9,14 @@ const Intro = () => {
         <h1 className="f-text">
           <ScrambleText
             text="CAPTURING MOMENTS"
-            duration={4000}
+            duration={3000}
             revealDelay={500}
           />
         </h1>
         <h1 className="s-text">
           <ScrambleText
             text="CREATING MEMORIES"
-            duration={4000}
+            duration={3000}
             revealDelay={1000}
           />
         </h1>

@@ -6,16 +6,17 @@ header {
   z-index: 1000;
   padding: 1rem 0;
   font-family: "Space Mono", serif;
+  display: flex;
+  justify-content: center;
   nav {
-    width: 1400px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    width: 100%;
     .container {
       display: flex;
       justify-content: space-between;
-    //   align-items: left;
-      gap: 5rem;
-        width: 62%;
+      align-items: center;
+        width: 80%;
       a {
         font-size: 18px;
         color: $primary-color;
@@ -31,23 +32,51 @@ header {
 }
 @media screen and (max-width: 1400px){
     header{
-        width: 100%;
         nav{
-            width: 100%;
-            border: 1px solid greenyellow;
+            width: 70%;
+            // border: 1px solid greenyellow;
             justify-content: center;
+            padding-left: 0;
             .container{
                 width: 100%;
-                border: 1px solid red;
+                // border: 1px solid red;
                 gap: 2rem;
-
                 .nav-links{
-                    gap: 1rem;
+                    gap: 3rem;
                 }
             }
         }
     }
 }
 @media screen and (max-width: 768px){
-
+  header{
+    nav{
+        width: 85%;
+        // border: 1px solid greenyellow;
+        justify-content: center;
+        padding-left: 0;
+        .container{
+            width: 100%;
+            // border: 1px solid red;
+            // gap: 2rem;
+            .nav-links{
+                // gap: 3rem;
+            }
+        }
+    }
+}
+}
+@media screen and (max-width: 480px){
+  header{
+    nav{
+        .container{
+            .nav-links{
+                gap: 1rem;
+            }
+            a {
+              font-size: 12px;
+            }
+        }
+    }
+}
 }

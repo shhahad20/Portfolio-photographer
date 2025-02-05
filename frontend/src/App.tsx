@@ -2,6 +2,7 @@ import "./App.css";
 import About from "./components/About";
 import Intro from "./components/Intro";
 import Navbar from "./components/Navbar";
+import ShowCases from "./components/ShowCases";
 import Works from "./components/Works";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Intro />
       <About />
       <Works/>
+      {/* <ShowCases/> */}
     </>
   );
 }

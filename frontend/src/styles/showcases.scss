@@ -1,0 +1,28 @@
+.body{
+	margin:0;
+	background:#15151e;
+	overflow-x:hidden;
+
+  .races-wrapper{
+    .races {
+      width:fit-content;
+      display:flex;
+      flex-wrap:nowrap;
+
+      h2 {
+        font-family: "Roboto", serif;
+        font-size:30vw;
+        flex-shrink:0;
+        padding-right:0.3em;
+        padding-left:0.3em;
+        color:#e10600;
+        
+        margin:0;	
+      }
+      h2:last-of-type {
+        background:#e1e1ff;
+      }
+    }
+  }
+
+}

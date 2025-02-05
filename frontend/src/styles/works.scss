@@ -1,28 +1,263 @@
-.body{
-	margin:0;
-	background:#15151e;
-	overflow-x:hidden;
+#works {
+  overflow-x: hidden;
+  // background: #15151e;
 
-  .races-wrapper{
-    .races {
-      width:fit-content;
-      display:flex;
-      flex-wrap:nowrap;
+  .space-100vh {
+    height: 100vh;
+  }
+  .space-50vh {
+    // height: 20vh;
+    // border: 1px solid white;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    // .works-header {
+    //   display: flex;
+    //   justify-content: left;
+    //   padding-left: 11%;
+    //   // border: 1px solid blue;
+    //   h2 {
+    //     font-size: 70px;
+    //     margin: 0;
+    //     color: #faf6ed;
+    //     font-family: "Roboto", sans-serif;
+    //   }
+    // }
+  }
+  .body {
+    margin: 0;
+    // background: #15151e;
+    overflow-x: hidden;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // border: 1px solid pink;
+    .races-wrapper {
+      // border: 1px solid greenyellow;
 
-      h2 {
-        font-family: "Roboto", serif;
-        font-size:30vw;
-        flex-shrink:0;
-        padding-right:0.3em;
-        padding-left:0.3em;
-        color:#e10600;
-        
-        margin:0;	
+      .works-header {
+        display: flex;
+        justify-content: left;
+        padding-left: 28.5%;
+        // max-width: 1200px;
+        // border: 1px solid blue;
+        h2 {
+          // border: 1px solid pink;
+
+          font-size: 70px;
+          margin: 0;
+          color: #faf6ed;
+          font-family: "Roboto", sans-serif;
+        }
       }
-      h2:last-of-type {
-        background:#e1e1ff;
+      .races {
+        width: fit-content;
+        display: flex;
+        flex-wrap: nowrap;
+
+        .panel {
+          // position: relative;
+          flex-shrink: 0;
+          width: 100vw; // Each panel takes full screen width
+          height: 100vh;
+          // box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          padding: 0;
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5rem;
+            .panel-bg {
+              // border: 1px solid greenyellow;
+              display: flex;
+              justify-content: center;
+              width: 1300px;
+              height: 1200px;
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            .left-content {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              gap: 3rem;
+              // border: 1px solid red;
+              .title-date{
+                h3 {
+                  font-size: 40px;
+                  font-weight: 500;
+                  margin: 0;
+                  color: #faf6ed;
+                  font-family: "Roboto", sans-serif;
+                }
+  
+                .date {
+                  font-family: "Space Mono", serif;
+                  font-size: 20px;
+                  color: #faf6ed;
+                  margin-bottom: 1rem;
+                }
+              }
+              .descrption {
+                font-family: "Space Mono", serif;
+                color: #faf6ed;
+                font-weight: 500;
+                font-size: 18px;
+                max-width: 30%;
+                text-align: left;
+              }
+            }
+
+
+          }
+        }
       }
     }
   }
+}
+/* RESPONSIVE STYLES */
+/* For devices with width 1024px and below */
+@media (max-width: 1024px ) {
+  #works {
+    .body {
+      .races-wrapper {
+        .works-header {
+          padding-left: 9%;
+          padding-top: 8rem;
+          h2 {
+            font-size: 70px;
+          }
+        }
+        .races {
+          .panel {
+            margin-top: 5rem;
+            height: 100%;
+            .container {
+              flex-direction: column;
+              .panel-bg {
+                width: 1000px;
+                height: 700px;
+                img {
+                  object-position: 50% 90%;
+                }
+              }
+              .left-content {
+                height: 200px;
+                padding: 0 5rem;
+                gap: 3rem;
+                
+                .title-date {
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  margin: 0;
+                  padding: 0;
+                  h3 {
+                    font-size: 32px;
+                  }
+                  .date {
+                    font-size: 16px;
+                    width: 100%;
+                  }
+                }
+                .descrption {
+                  font-size: 16px;
+                  max-width: 50%;
+                  height: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+/* For devices with width 768px and below */
+@media (max-width: 768px) {
+  #works {
+    .body {
+      .races-wrapper {
+        .works-header {
+          padding-left: 10%;
+          h2 {
+            font-size: 40px;
+          }
+        }
+        .races {
+          .panel {
+            .container {
+              flex-direction: column;
+              padding: 0 1rem;
+              .panel-bg {
+                width: 100%;
+                height: auto;
+              }
+              .left-content {
+                align-items: center;
+                h3 {
+                  font-size: 28px;
+                }
+                .date {
+                  font-size: 14px;
+                }
+              }
+              p {
+                font-size: 14px;
+                max-width: 90%;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* For devices with width 480px and below */
+@media (max-width: 480px) {
+  #works {
+    .body {
+      .races-wrapper {
+        .works-header {
+          padding-left: 5%;
+          h2 {
+            font-size: 32px;
+          }
+        }
+        .races {
+          .panel {
+            .container {
+              padding: 0 0.5rem;
+              .left-content {
+                h3 {
+                  font-size: 24px;
+                }
+                .date {
+                  font-size: 12px;
+                }
+              }
+              p {
+                font-size: 12px;
+                max-width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

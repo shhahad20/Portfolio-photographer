@@ -1,39 +1,41 @@
-// about.scss
 #about-me {
   padding: 2rem;
-  // background: #000;
   color: #faf6ed;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   margin-bottom: 4rem;
+
   .about-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 
     .about-content-container {
       display: flex;
       justify-content: center;
       align-items: flex-end;
       gap: 20rem;
-      // height: 50vh;
+
       .about-header {
         h1 {
           font-size: 70px;
           margin: 0;
         }
       }
+
       .about-content {
-        // border: 1px solid greenyellow;
         width: 35%;
         p {
           font-size: 18px;
           line-height: 40px;
         }
+
         .about-extra {
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding-top: 2rem;
+
           p {
             font-size: 14px;
             margin: 0;
@@ -44,6 +46,86 @@
         }
       }
     }
-
   }
+
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .about-container {
+    .about-content-container {
+      // flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10rem;
+
+      .about-header {
+        h1 {
+          // font-size: 50px;
+        }
+
+      }
+
+      .about-content {
+        width: 50%;
+      }
+    }
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-container {
+    .about-content-container {
+      gap: 5.5rem;
+
+      .about-header {
+        h1 {
+          font-size: 50px;
+        }
+      }
+
+      .about-content {
+        text-align: left;
+        width: 55%;
+        p {
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .about-extra {
+      // flex-direction: column;
+      // justify-content: space-between;
+      text-align: left;
+      // gap: 1rem;
+      .slogan{
+        width: 50%;
+      }
+    }
+  }}
+
+  @media screen and (max-width: 480px) {
+    .about-container {
+    // padding: 1rem;
+
+    .about-content-container {
+      flex-direction: column;
+      gap: 1.5rem;
+      .about-header {
+        width: 100%;
+        text-align: left;
+        h1 {
+          font-size: 28px;
+        }
+      }
+
+      .about-content {
+        width: 100%;
+
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+    }
+  }}
 }

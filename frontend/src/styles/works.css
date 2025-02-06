@@ -1,3 +1,4 @@
+/* Base styles */
 #works {
   overflow-x: hidden;
 }
@@ -6,42 +7,22 @@
   height: 100vh;
 }
 
-#works .space-50vh {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
 #works .body {
   margin: 0;
   overflow-x: hidden;
-}
-
-#works .body .races-wrapper {
-  border: 1px solid greenyellow;
 }
 
 #works .body .races-wrapper .works-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-left: 28.5%;
-  border: 1px solid blue;
 }
 
 #works .body .races-wrapper .works-header h2 {
-  border: 1px solid pink;
   font-size: 70px;
   margin: 0;
   color: #faf6ed;
@@ -57,6 +38,13 @@
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+#works .body .races-wrapper .races .panel-space {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 10vw;
+  height: 100vh;
 }
 
 #works .body .races-wrapper .races .panel {
@@ -81,75 +69,277 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 5rem;
+  height: 100%;
+  /* Reduced padding to minimize extra space */
+  padding: 0 2rem;
+  gap: 1rem;
 }
 
-#works .body .races-wrapper .races .panel .container .panel-bg {
-  border: 1px solid greenyellow;
+#works .body .races-wrapper .races .panel .container .panel-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+}
+
+#works .body .races-wrapper .races .panel .container .panel-content .left-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 1300px;
-  height: 1200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding-left: 2rem;
 }
 
-#works .body .races-wrapper .races .panel .container .panel-bg img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#works .body .races-wrapper .races .panel .container .left-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-}
-
-#works .body .races-wrapper .races .panel .container .left-content h3 {
+#works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date h3 {
   font-size: 40px;
   font-weight: 500;
   margin: 0;
-  -webkit-backdrop-filter: blur(10px) saturate(70%);
-          backdrop-filter: blur(10px) saturate(70%);
   color: #faf6ed;
   font-family: "Roboto", sans-serif;
 }
 
-#works .body .races-wrapper .races .panel .container .left-content .date {
+#works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date .date {
   font-family: "Space Mono", serif;
   font-size: 20px;
-  -webkit-backdrop-filter: blur(10px) saturate(70%);
-          backdrop-filter: blur(10px) saturate(70%);
   color: #faf6ed;
   margin-bottom: 1rem;
 }
 
-#works .body .races-wrapper .races .panel .container p {
+#works .body .races-wrapper .races .panel .container .panel-content .left-content .descrption {
   font-family: "Space Mono", serif;
   color: #faf6ed;
   font-weight: 500;
   font-size: 18px;
-  max-width: 30%;
+  max-width: 80%;
   text-align: left;
 }
 
-#works .body .races-wrapper .races .orange {
-  background-color: orange;
+#works .body .races-wrapper .races .panel .container .panel-bg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Remove fixed sizes to let the image fill its space */
+  width: 50%;
+  height: 80%;
+}
+
+#works .body .races-wrapper .races .panel .container .panel-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 90%;
+     object-position: 50% 90%;
+}
+
+/* Responsive Styles */
+/* For screens 1400px and below */
+@media (max-width: 1400px) {
+  #works .body .races-wrapper .works-header {
+    padding-left: 15%;
+    padding-top: 8rem;
+  }
+  #works .body .races-wrapper .works-header h2 {
+    font-size: 70px;
+  }
+  #works .body .races-wrapper .races .panel .container {
+    padding: 0 2rem;
+    padding-bottom: 6rem;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content {
+    width: 50%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content {
+    gap: 1rem;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date {
+    width: 90%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date h3 {
+    font-size: 32px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date .date {
+    font-size: 16px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .descrption {
+    font-size: 16px;
+    max-width: 90%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg {
+    width: 50%;
+    height: 50%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg img {
+    -o-object-position: 50% 90%;
+       object-position: 50% 90%;
+  }
+}
+
+/* For screens 1024px and below */
+@media (max-width: 1024px) {
+  #works {
+    margin-top: 10rem;
+  }
+  #works .body .races-wrapper .works-header {
+    padding-left: 9%;
+    padding-top: 8rem;
+  }
+  #works .body .races-wrapper .works-header h2 {
+    font-size: 70px;
+  }
+  #works .body .races-wrapper .races .panel-space {
+    display: none;
+  }
+  #works .body .races-wrapper .races .panel .container {
+    padding: 0 2rem;
+    padding-bottom: 6rem;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content {
+    gap: 1rem;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date {
+    width: 90%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date h3 {
+    font-size: 32px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date .date {
+    font-size: 16px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .descrption {
+    font-size: 16px;
+    max-width: 90%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg {
+    width: 50%;
+    height: 50%;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg img {
+    -o-object-position: 50% 90%;
+       object-position: 50% 90%;
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  #works .body .races-wrapper .works-header {
+    padding-left: 10%;
+  }
+  #works .body .races-wrapper .works-header h2 {
+    font-size: 50px;
+  }
+  #works .body .races-wrapper .races .panel .container {
+    padding: 0 1rem;
+    padding-bottom: 6rem;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg {
+    width: 100%;
+    height: auto;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content {
+    padding: 0;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date h3 {
+    font-size: 24px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date .date {
+    font-size: 14px;
+    padding: 4px 0;
+    margin: 0;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .descrption {
+    font-size: 14px;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+  #works .body .races-wrapper .works-header {
+    padding-left: 5%;
+  }
+  #works .body .races-wrapper .works-header h2 {
+    font-size: 28px;
+  }
+  #works .body .races-wrapper .races .panel .container {
+    /* Stack elements vertically */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 0.5rem;
+    /* Ensure the text appears above the image */
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    /* Optional: add bottom margin for spacing */
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content {
+    padding-top: 1rem;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date h3 {
+    font-size: 22px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .title-date .date {
+    font-size: 12px;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-content .left-content .descrption {
+    font-size: 12px;
+    max-width: 95%;
+    text-align: left;
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    height: 70%;
+    /* Ensure the image fits the container */
+  }
+  #works .body .races-wrapper .races .panel .container .panel-bg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=works.css.map */

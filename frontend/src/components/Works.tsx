@@ -124,7 +124,7 @@ export default function Works() {
           </div>
         </div>
       </div>
-      <div className="space-100vh lightBG"></div>
+      {/* <div className="space-100vh lightBG"></div> */}
     </section>
   );
 }

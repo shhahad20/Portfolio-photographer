@@ -1,0 +1,237 @@
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  padding: 0 1rem;
+  color: #faf6ed;
+}
+
+#contact .section-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+#contact .section-container .header-container {
+  padding-bottom: 1.5rem;
+  text-align: left;
+}
+
+#contact .section-container .header-container h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#contact .section-container .header-container p {
+  width: 70%;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+#contact .section-container .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  padding: 2rem 0;
+  margin-top: 1rem;
+}
+
+#contact .section-container .container .email-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#contact .section-container .container .email-container .email {
+  border: 1px solid #faf6ed;
+  padding: 0 5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+#contact .section-container .container .email-container .email h3 {
+  font-family: "Space Mono", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#contact .section-container .container .email-container .email:hover {
+  background-color: #1a1a1a;
+}
+
+#contact .section-container .container .email-container .email .copied-message {
+  font-family: "Space Mono", serif;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #1a1a1a;
+  color: #faf6ed;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#contact .section-container .container .soical-media ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+#contact .section-container .container .soical-media ul li {
+  list-style: none;
+}
+
+#contact .section-container .container .soical-media ul li a svg {
+  width: 33px;
+  height: 33px;
+}
+
+#contact .section-container .container .soical-media ul li a .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1024px) {
+  #contact {
+    padding: 0 4.5rem;
+    height: 60vh;
+  }
+  #contact .section-container .header-container {
+    padding: 0 2rem;
+  }
+  #contact .section-container .header-container h2 {
+    font-size: 70px;
+  }
+  #contact .section-container .header-container p {
+    font-size: 18px;
+  }
+  #contact .section-container .container {
+    gap: 5rem;
+    padding: 1.5rem 2rem;
+  }
+  #contact .section-container .container .email-container .email {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact .section-container .header-container {
+    padding: 0 2rem;
+  }
+  #contact .section-container .header-container h2 {
+    font-size: 50px;
+  }
+  #contact .section-container .header-container p {
+    width: 100%;
+    font-size: 18px;
+  }
+  #contact .section-container .container {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  #contact .section-container .email-container .email {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 1rem;
+  }
+  #contact .section-container .header-container {
+    padding: 0 2rem;
+  }
+  #contact .section-container .header-container h2 {
+    font-size: 28px;
+  }
+  #contact .section-container .header-container p {
+    width: 100%;
+    font-size: 14px;
+  }
+  #contact .section-container .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  #contact .section-container .container .email-container .email {
+    padding: 0 4rem;
+  }
+  #contact .section-container .container .soical-media ul {
+    gap: 2rem;
+  }
+  #contact .section-container .container .soical-media ul li a svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  font-family: "Poppins", serif;
+}
+
+footer h3 {
+  color: #686868;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  footer h3 {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

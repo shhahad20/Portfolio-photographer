@@ -4,11 +4,13 @@
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   margin-bottom: 4rem;
+  /* Responsive Design */
 }
 
 #about-me .about-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #about-me .about-container .about-content-container {
@@ -57,5 +59,65 @@
   padding: 0;
   line-height: 25px;
   font-family: "Space Mono", serif;
+}
+
+@media screen and (max-width: 1024px) {
+  #about-me .about-container .about-content-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    gap: 10rem;
+  }
+  #about-me .about-container .about-content-container .about-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about-me .about-container .about-content-container {
+    gap: 5.5rem;
+  }
+  #about-me .about-container .about-content-container .about-header h1 {
+    font-size: 50px;
+  }
+  #about-me .about-container .about-content-container .about-content {
+    text-align: left;
+    width: 55%;
+  }
+  #about-me .about-container .about-content-container .about-content p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  #about-me .about-container .about-extra {
+    text-align: left;
+  }
+  #about-me .about-container .about-extra .slogan {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about-me .about-container .about-content-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+  #about-me .about-container .about-content-container .about-header {
+    width: 100%;
+    text-align: left;
+  }
+  #about-me .about-container .about-content-container .about-header h1 {
+    font-size: 28px;
+  }
+  #about-me .about-container .about-content-container .about-content {
+    width: 100%;
+  }
+  #about-me .about-container .about-content-container .about-content p {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 /*# sourceMappingURL=about.css.map */

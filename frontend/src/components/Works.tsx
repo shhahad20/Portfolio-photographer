@@ -32,7 +32,7 @@ export default function Works() {
       animation: tween,
       scrub: 1,
       invalidateOnRefresh: true,
-      markers: true, // Remove or disable markers for production
+      markers: false, // Remove or disable markers for production
     });
 
     return () => {
